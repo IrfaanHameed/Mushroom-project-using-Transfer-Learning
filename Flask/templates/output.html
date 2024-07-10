@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Mushrooms</title>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.733); overflow-x: hidden;">
+    <header>
+        <div class="title">
+            <a href="/"><h1>Mushroom Classification</h1></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/input">About</a></li>
+            <li><a href="/images">Images</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="mid1">
+        <h2 style="text-align: center; font-weight: 200;font-size: 32px;">Choose a Mushroom image file  to classify.</h2>
+        <form method="POST" action="/predict" enctype="multipart/form-data">
+          <input type="file" id="choose-file" name="image"/>
+          <br><br>
+          <button type="submit" class="btncls">Classify</button>
+        </form>
+        <br><br>
+        <h2 style="text-align: center; font-weight: 200;font-size: 32px;">The Mushroom is : {{result}} </h2>
+
+        </h2>
+        </div>
+
+
+        
+   
+        
+      <style>
+  #choose-file{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  header {
+    background-image: url("/static/images/banner-mushroom.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  header a{
+    text-decoration: none;
+  }
+  .title {
+    flex: 1;
+  }
+  
+  .title h1 {
+    margin: 0;
+    color: black;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+
+  }
+  nav ul li a:hover{
+    color:white;
+    background-color:rgba(0, 0, 0, 0.733);
+    cursor: pointer;
+    transition-duration: 0.6s;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: black;
+    border-style: none;
+  }
+  #mid1{
+    display: flex;
+    color: white;
+    padding-top: 100px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #choose-file button{
+    width: 160px;
+    border-radius: 20px;
+    border-style: none;
+    height: 35px;
+    font-weight: bold;
+    color:  black;
+    background-color:white;
+    margin-right: 10px;
+  }
+  .btncls{
+    width: 160px;
+    height: 35px;
+    font-size: large;
+    border-radius: 20px;
+    color:  white;
+    background-color: transparent;
+    border: none;
+  }
+  .btncls input:hover{
+    background-color: aliceblue;
+    color:black;
+  }
+  #mid1 p{
+    max-width: 600px;
+  }
+  #mid1 button:hover{
+    background-color:white;
+    color: black;
+    cursor: pointer;
+    transition-duration: 0.6s;
+  }
+  #mid1 button:not(:focus) {
+    transition-duration: 0.6s;
+  }
+
+      </style>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <title>Mushroom Classification</title>
+</head>
+<body >
+
+  <header>
+    <a href="/">
+    <div class="title">
+      <h1 style="font-weight: 100;font-size: 32px;">Mushroom Classification</h1>
+    </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="/input">About</a></li>
+        <li><a href="/images">Images</a></li>
+        <li><a href="/predict">Predict</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="mid">
+    <h1 style="font-weight: 200;font-size: 32px;">Mushroom Classification Using Deep Learning</h1>
+    <p>Through this project we will be able to classify the mushrooms</p>
+    <a href="/input"><button>About Mushrooms</button></a>
+  </div>
+  <!-- Rest of your homepage content goes here -->
+
+  <style>
+    header {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    /* margin-right: -10px; */
+  }
+  header h1{
+    text-decoration: none;
+  }
+  header a{
+    text-decoration: none;
+  }
+  
+  .title {
+    flex: 1;
+  }
+  
+  .title h1 {
+    margin: 0;
+    color: white;
+    border-bottom: none;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+  }
+  nav ul li a:hover{
+    color:white;
+    background-color:rgb(255, 68, 0);
+    cursor: pointer;
+    transition-duration: 0.6s;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    border-style: none;
+  }
+  /* Add any additional styles for the rest of your homepage content */
+  body {
+    background: rgba(0,0,0,0.7)url("/static/images/banner-mushroom.jpg");
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #mid{
+    display: flex;
+    color: white;
+    padding-top: 200px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #mid h1{
+    padding-bottom: 10px;
+    border-bottom: 3px solid black;
+    border-bottom-color: orangered;
+  }
+  #mid button{
+    width: 160px;
+    border-radius: 20px;
+    border-style: none;
+    height: 40px;
+    color: white;
+    background-color: rgb(255, 68, 0);
+  }
+  #mid button:hover{
+    color:  rgb(255, 68, 0);
+    background-color:white;
+    cursor: pointer;
+    transition-duration: 0.6s;
+  }
+  #mid button:not(:focus) {
+    transition-duration: 0.6s;
+  }
+
+  /* Add any additional styles for the rest of your homepage content */
+    
+  </style>
+</body>
+</html>

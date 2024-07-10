@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mushroom Images</title>
+</head>
+<body style="background-color: white; overflow-x: hidden;">
+    <header>
+        <div class="title">
+          <a href="/"><h1 style="color: black;">Mushroom Classification</h1></a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/input">About</a></li>
+            <li><a href="/images">Images</a></li>
+            <li><a href="/predict">Predict</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div id="mid1">
+        <h1>Images</h1>
+            <div class="imagesdiv">
+            <container class="container">
+              <div class="image">
+                <img src="static/images/boletus.jpg" alt=""/>
+              </div>
+              <div class="text">
+                <p>Category</p>
+                <h3>Boletus</h3>
+              </div>
+            </container>
+
+            <container class="container">
+              <div class="image">
+                <img src="static/images/lactarius.jpg" alt=""/>
+              </div>
+              <div class="text">
+                <p>Category</p>
+                <h3>Lactarius</h3>
+              </div>
+            </container>
+
+            <container class="container">
+              <div class="image">
+                <img src="static/images/russula.jpg" alt=""/>
+              </div>
+              <div class="text">
+                <p>Category</p>
+                <h3>Russula</h3>
+              </div>
+            </container>
+      </div>
+        </div>
+      </div>
+      <style>
+        .imagesdiv{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .image img{
+          width: 300px;
+          height: 300px;
+          position: relative;
+          visibility: visible;
+        }
+        .container{
+          width: 300px;
+          height: 300px; 
+          margin-right: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+        }
+        .text{
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          opacity: 0;
+          background-color: orangered;
+          color: white;
+          width: 300px;
+          height: 300px;
+          visibility: hidden;
+        }
+        container:hover .text{
+          visibility: visible;
+          opacity: 0.8;
+          transition-duration: 0.6s;
+        }
+        container:not(:focus) .text{
+          transition-duration: 0.6s;
+        }
+  header {
+    background-color: orangered;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  header a{
+    text-decoration: none;
+  }
+  #mid1 h1{
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+    border-bottom-color: orangered;
+  }
+  
+  .title {
+    flex: 1;
+  }
+  
+  .title h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 10px;
+  }
+  nav ul li a:hover{
+    color:rgb(255, 68, 0);
+    background-color: white;
+    cursor: pointer;
+    transition-duration: 0.6s;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    border-style: none;
+  }
+  #mid1{
+    display: flex;
+    color: black;
+    padding-top: 80px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #imagesdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+      </style>
+</body>
+</html>
